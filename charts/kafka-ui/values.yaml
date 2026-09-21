@@ -268,7 +268,7 @@ ingress:
 ## ref: https://gateway-api.sigs.k8s.io/api-types/httproute/
 httpRoute:
   ## @param httpRoute.enabled [string] Enable httpRoute manifest generation for Kafka-UI.
-  enabled: true
+  enabled: false
   ## @param httpRoute.annotations [object] Additional annotations for the HTTPRoute resource.
   annotations: {}
   # @param httpRoute.parentRefs [array] Which Gateways this Route is attached to.
