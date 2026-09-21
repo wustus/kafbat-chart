@@ -84,6 +84,12 @@
 | `ingress.tls.secretName`   | The name of a pre-created Secret containing a TLS private key and certificate                                                    | `""`        |
 | `ingress.precedingPaths`   | HTTP paths to add to the Ingress before the default path                                                                         | `[]`        |
 | `ingress.succeedingPaths`  | Http paths to add to the Ingress after the default path                                                                          | `[]`        |
+| `httpRoute.enabled`        | Enable httpRoute manifest generation for Kafka-UI.                                                                               | `false`     |
+| `httpRoute.annotations`    | Additional annotations for the HTTPRoute resource.                                                                               | `{}`        |
+| `httpRoute.parentRefs`     | Which Gateways this Route is attached to.                                                                                        | `[]`        |
+| `httpRoute.hostnames`      | Hostnames matching HTTP header.                                                                                                  | `[]`        |
+| `httpRoute.matches`        | Rule matches (paths, headers, query params, method).                                                                             | `[]`        |
+| `httpRoute.filters`        | Filters applied to requests matched by the rule.                                                                                 | `[]`        |
 | `resources`                | Set Kafka-UI pod requests and limits for different resources like CPU or memory (essential for production workloads)             | `{}`        |
 
 ### Scheduling

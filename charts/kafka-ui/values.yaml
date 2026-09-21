@@ -263,6 +263,23 @@ ingress:
 
   ## @param ingress.succeedingPaths [array] Http paths to add to the Ingress after the default path
   succeedingPaths: []
+
+## Kafka-UI HTTPRoute configuration
+## ref: https://gateway-api.sigs.k8s.io/api-types/httproute/
+httpRoute:
+  ## @param httpRoute.enabled [string] Enable httpRoute manifest generation for Kafka-UI.
+  enabled: true
+  ## @param httpRoute.annotations [object] Additional annotations for the HTTPRoute resource.
+  annotations: {}
+  # @param httpRoute.parentRefs [array] Which Gateways this Route is attached to.
+  parentRefs: []
+  # @param httpRoute.hostnames [array] Hostnames matching HTTP header.
+  hostnames: []
+  # @param httpRoute.matches [array] Rule matches (paths, headers, query params, method).
+  matches: []
+  # @param httpRoute.filters [array] Filters applied to requests matched by the rule.
+  filters: []
+
 ## @param resources [object] Set Kafka-UI pod requests and limits for different resources like CPU or memory (essential for production workloads)
 
 ## @section Scheduling
